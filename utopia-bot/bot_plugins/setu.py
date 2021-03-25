@@ -9,7 +9,7 @@ import json
 __plugin_name__ = 'setu'
 __plugin_usage__ = '用法： 对我说 "setu"，我会回复随机一张非R18的动漫图片'
 
-apikey="574971726058618c4c45f8"
+apikey=""
 
 @on_command('setu', aliases='涩图')
 async def _(session: CommandSession):
