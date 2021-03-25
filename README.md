@@ -12,10 +12,31 @@
 
 ## 简介
 本项目完全由Python实现。依托于开源QQ机器人nonebot提供机器人服务对消息进行解析及相应，通过go-cqhttp客户端登录QQ并进行消息接收与发送。  
+本项目代码难度是非常非常非常低的  
 目前仅实现了少数计划功能  
 Telegram版本的Utopia Bot正在开发中  
-部署前请对API进行调试 
-
+部署前请对API进行调试  
+功能计划：
+- [x] 查看全部指令  
+- [x] 一言  
+- [x] 涩图自动机 
+- [x] 知乎日报  
+- [x] 英语句子（词霸来源）  
+- [x] 微博热搜  
+- [x] 哔哩哔哩热门视频  
+- [ ] 天气查询
+- [ ] 大盘行情与自选股
+- [ ] 每日考研英语（何凯文来源）
+- [ ] NLP聊天机器人
+- [ ] 复读机
+- [ ] 违禁语言检测
+- [ ] 自动加群审批
+- [ ] 自动成员清理
+- [ ] 聊天图片鉴黄
+- [ ] ~~签到自动机~~
+- [ ] ~~运气游戏~~
+- [ ] ~~大富翁~~
+- [ ] 等等等等还在考虑
 
 ## 接口使用
 1. 句子接口：[一言·Hitokoto](https://hitokoto.cn/)  
@@ -34,10 +55,26 @@ Telegram版本的Utopia Bot正在开发中
 6. 哔哩哔哩热门视频：[哔哩哔哩官方接口](https://api.bilibili.com/x/web-interface/popular?ps=1&pn=1)  
    哔哩哔哩的官方热榜接口。此处需要注意的是ps为每次获取的视频信息个数，pn为起始视频的实时热榜排名。因此在机器人中pn为1~50随机生成的来保证每次都能取到前50内不同的视频
 ## 部署
+本块内容请参考[luciabot](https://github.com/Box-s-ville/luciabot)的文档
 - ### 部署 go-cqhttp
+  1. 请先参考官方部署教程
+  2. 简单的部署讲解：  
+    a. 在go-cqhttp仓库的release中下载对应平台的的客户端，例如X64架构CPU下Windows下载windows-amd64.exe版本，X64架构CPU下Linux下载linux-amd64版本等  
+    b. 下载客户端后，请运行客户端，即命令行./go-cqhttp  
+    c. 运行后关闭客户端，对配置文件config.hjson进行修改，修改方式在其中已经有所注释，一般只需要修改QQ号和QQ密码即可，然后重新启动客户端程序  
+    d.  然后按照指示验证QQ登录，具体请参照go-cqhttp文档
 - ### 部署Python环境
+  1. 项目需要Python3，请保证您的服务器Python版本正确
+  2. 需要安装库：nonebot、requests、beautifulsoup4、ujson（可选）、msgpack（可选）
 - ### 部署 Utopia Bot
-
+  1. 选择一个合适的文件夹来准备放置项目文件
+  2. 使用Git命令将项目克隆到本地，即  
+   ```git clone https://github.com/UtopiaXC/Utopia-Bot-For-QQ.git```
+  3. 进入文件夹，即  
+   ```cd Utopia-Bot-For-QQ\utopia-bot```
+  4. 启动nonebot服务，即  
+   ```python3 bot.py ```
+- 注意：go-cqhttp与nonebot均需要常驻运行，请使用守护进程或screen
 ## 功能
 1. ### 帮助
    ![help](pictures/help.png)
