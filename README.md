@@ -1,4 +1,7 @@
 # Utopia-Bot-For-QQ
+[![MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/UtopiaXC/Utopia-Bot-For-QQ/blob/master/LICENSE)
+[![python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/downloads/)
+[]
 这是一个基于[nonebot](https://github.com/nonebot/nonebot)机器人框架与[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)客户端设计的QQ聊天机器人  
 文档更新时间 2021-03-25
 
