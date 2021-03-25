@@ -39,13 +39,20 @@ Telegram版本的Utopia Bot正在开发中
 - ### 部署 Utopia Bot
 
 ## 功能
-1. 帮助![help](pictures/help.png)
-2. 一言![sentence](pictures/sentence.png)
-3. 涩图![setu](pictures/setu.png)
-4. 日报![daily](pictures/daily.png)
-5. 英语句子![english](pictures/english.png)
-6. 微博热搜![weibo](pictures/weibo.png)
-7. 哔哩哔哩热门视频![bili](pictures/bili.png)
+1. ### 帮助
+   ![help](pictures/help.png)
+2. ### 一言
+   ![sentence](pictures/sentence.png)
+3. ### 涩图
+   ![setu](pictures/setu.png)
+4. ### 日报
+   ![daily](pictures/daily.png)
+5. ### 英语句子
+   ![english](pictures/english.png)
+6. ### 微博热搜
+   ![weibo](pictures/weibo.png)
+7. ### 哔哩哔哩热门视频
+   ![bili](pictures/bili.png)
 
 ## 注意
 1. 请注意，涩图接口存在R18内容，请带有r18=0参数访问接口
