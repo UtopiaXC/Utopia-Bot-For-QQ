@@ -58,7 +58,7 @@ Telegram版本的Utopia Bot正在开发中
 4. 英语句子：[金山词霸每日英语](http://sentence.iciba.com/index.php?c=dailysentence&m=getdetail&title=2020-01-01)  
    本接口为金山词霸每日英语接口，每次返回一句英语，请注意title参数，该参数为获取句子的日期。机器人默认选取当天至当天前六百天内的任意一天进行爬取
 5. 微博热搜：暂时由爬虫实现  
-   一个无害的小型的网页爬虫，仅获取热搜前十，如需更多请自行修改循环次数。
+   一个无害的小型的网页爬虫。
 6. 哔哩哔哩热门视频：[哔哩哔哩官方接口](https://api.bilibili.com/x/web-interface/popular?ps=1&pn=1)  
    哔哩哔哩的官方热榜接口。此处需要注意的是ps为每次获取的视频信息个数，pn为起始视频的实时热榜排名。因此在机器人中pn为1~50随机生成的来保证每次都能取到前50内不同的视频
 7. 天气接口：[wttr.in](https://wttr.in/)  

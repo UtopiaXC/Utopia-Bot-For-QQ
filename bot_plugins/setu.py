@@ -13,19 +13,7 @@ __plugin_usage__ = '用法： 对我说 "setu"，我会回复随机一张非R18�
 apikey = ""
 
 
-async def task(event):
-    res = requests.get("https://api.lolicon.app/setu/?r18=0&apikey=" + apikey)
-    json_str = json.loads(res.text)
-    url = json_str['data'][0]['url']
-    author = json_str['data'][0]['author']
-    pid = json_str['data'][0]['pid']
-    title = json_str['data'][0]['title']
-    await _bot.send(event,"图片信息：\n"
-                       "作者：" + str(author)
-                       + "\n图片PID：" + str(pid)
-                       + "\n图片标题：" + str(title)
-                       + "\n注意：图片将在二十秒后撤回")
-    message = await _bot.send(event,MessageSegment.image(url))
+async def task(event,message):
     await asyncio.sleep(20)
     if message is not None:
         await _bot.delete_msg(message_id=message['message_id'])
@@ -35,4 +23,19 @@ async def task(event):
 
 @on_command('setu', aliases='涩图')
 async def _(session: CommandSession):
-        scheduler.add_job(task, args=[session.event])
+    res = requests.get("https://api.lolicon.app/setu/?r18=0&apikey=" + apikey)
+    json_str = json.loads(res.text)
+    if json_str['code'] == 401:
+        await session.send("API接口超过调用限制（每令牌每天限制300）或API令牌被封禁")
+        return
+    url = json_str['data'][0]['url']
+    author = json_str['data'][0]['author']
+    pid = json_str['data'][0]['pid']
+    title = json_str['data'][0]['title']
+    await _bot.send(session.event, "图片信息：\n"
+                           "作者：" + str(author)
+                    + "\n图片PID：" + str(pid)
+                    + "\n图片标题：" + str(title)
+                    + "\n注意：图片将在二十秒后撤回")
+    message = await _bot.send(session.event, MessageSegment.image(url))
+    scheduler.add_job(task, args=[session.event,message])
