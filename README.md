@@ -77,7 +77,7 @@ Telegram版本的Utopia Bot正在开发中
 - ### 部署Python环境
     1. 项目需要Python3，请保证您的服务器Python版本正确
     2. 需要安装库：nonebot（本体，必需）、requests（用于爬虫请求，必需）、beautifulsoup4（用于爬虫页面分析，微博模块必需）、jieba（用于分词，天气模块语义分析必需）、APScheduler（用于启动后台任务，涩图模块必需）、ujson（工具，可选）、msgpack（工具，可选）  
-        ```pip install nonebot requests beautifulsoup4 jieba APScheduler ujson msgpack```
+        ```pip install nonebot requests beautifulsoup4 jieba APScheduler ujson msgpack``` 
 - ### 部署 Utopia Bot
     1. 选择一个合适的文件夹来准备放置项目文件
     2. 使用Git命令将项目克隆到本地，即  
