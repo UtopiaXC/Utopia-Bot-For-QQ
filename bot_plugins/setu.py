@@ -14,7 +14,8 @@ __plugin_usage__ = '用法： 对我说 "setu"，我会回复随机一张非R18�
 apikey = config.setu_apikey
 
 
-async def task(event,message):
+async def task(event,url):
+    message = await _bot.send(event, MessageSegment.image(url))
     await asyncio.sleep(20)
     if message is not None:
         await _bot.delete_msg(message_id=message['message_id'])
@@ -38,5 +39,4 @@ async def _(session: CommandSession):
                     + "\n图片PID：" + str(pid)
                     + "\n图片标题：" + str(title)
                     + "\n注意：图片将在二十秒后撤回")
-    message = await _bot.send(session.event, MessageSegment.image(url))
-    scheduler.add_job(task, args=[session.event,message])
+    scheduler.add_job(task, args=[session.event,url])

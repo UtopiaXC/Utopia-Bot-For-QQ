@@ -32,7 +32,11 @@ Telegram版本的Utopia Bot正在开发中
 - [x] 微博热搜
 - [x] 哔哩哔哩热门视频
 - [x] 天气查询
-- [ ] 大盘行情与自选股
+- [ ] 证券
+    - [x] 股票实时查询
+    - [ ] 自选股
+    - [ ] 基金查询
+    - [ ] 热点新闻  
 - [ ] 每日考研英语（何凯文来源）
 - [ ] NLP聊天机器人
 - [ ] 复读机
@@ -65,6 +69,8 @@ Telegram版本的Utopia Bot正在开发中
    哔哩哔哩的官方热榜接口。此处需要注意的是ps为每次获取的视频信息个数，pn为起始视频的实时热榜排名。因此在机器人中pn为1~50随机生成的来保证每次都能取到前50内不同的视频
 7. 天气接口：[wttr.in](https://wttr.in/)  
     参考[luciabot](https://github.com/Box-s-ville/luciabot)的天气实现
+8. 股票接口：[雪球](https://xueqiu.com/)  
+    一个无害化的小爬虫，对雪球进行爬取。由[Wu-Peize](https://github.com/Wu-Peize)提供
 ## 部署
 
 本块内容请参考[luciabot](https://github.com/Box-s-ville/luciabot)的文档
