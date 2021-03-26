@@ -4,13 +4,14 @@ from nonebot import scheduler, _bot
 from nonebot.command import CommandSession
 from nonebot.experimental.plugin import on_command
 from aiocqhttp.message import MessageSegment  # aiocqhttp 是 nonebot 的自带依赖
+from source.config import config
 import requests
 import json
 
 __plugin_name__ = 'setu'
 __plugin_usage__ = '用法： 对我说 "setu"，我会回复随机一张非R18的动漫图片'
 
-apikey = ""
+apikey = config.setu_apikey
 
 
 async def task(event,message):

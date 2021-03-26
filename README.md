@@ -37,6 +37,7 @@ Telegram版本的Utopia Bot正在开发中
 - [ ] NLP聊天机器人
 - [ ] 复读机
 - [ ] 违禁语言检测
+- [x] 好友审批与群聊邀请自动通过
 - [ ] 自动加群审批
 - [ ] 自动成员清理
 - [ ] 聊天图片鉴黄
@@ -79,6 +80,12 @@ Telegram版本的Utopia Bot正在开发中
     1. 项目需要Python3，请保证您的服务器Python版本正确
     2. 需要安装库：nonebot（本体，必需）、requests（用于爬虫请求，必需）、beautifulsoup4（用于爬虫页面分析，微博模块必需）、jieba（用于分词，天气模块语义分析必需）、APScheduler（用于启动后台任务，涩图模块必需）、ujson（工具，可选）、msgpack（工具，可选）  
         ```pip install nonebot requests beautifulsoup4 jieba APScheduler ujson msgpack``` 
+
+- ### 参数设定
+    1. 请在部署机器人前对配置文件中的参数进行修改
+    2. 配置文件：位于source文件夹中的config.py
+    3. 请按照文件内注释对参数进行修改  
+
 - ### 部署 Utopia Bot
     1. 选择一个合适的文件夹来准备放置项目文件
     2. 使用Git命令将项目克隆到本地，即  
@@ -87,10 +94,13 @@ Telegram版本的Utopia Bot正在开发中
        ```cd Utopia-Bot-For-QQ```
     4. 启动nonebot服务，即  
        ```python3 bot.py ```
+       
+
+  
 - 注意：go-cqhttp与nonebot均需要常驻运行，请使用守护进程或screen
 
 ## 功能
-
+请对照简介中的功能进行比对，部分无图片功能用文字描述
 1. ### 帮助
    ![help](pictures/help.png)
 2. ### 一言
@@ -107,7 +117,8 @@ Telegram版本的Utopia Bot正在开发中
    ![bili](pictures/bili.png)
 8. ### 天气
    ![weather](pictures/weather.png)
-
+9. ### 自动接受好友请求与群邀请
+    机器人将自动接受所有人的好友申请，同时会接受超级管理员的群邀请
 ## 注意
 
 1. 请注意，涩图接口存在R18内容，请带有r18=0参数访问接口

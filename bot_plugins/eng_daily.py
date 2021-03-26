@@ -27,17 +27,21 @@ async def _(session: CommandSession):
     date = time.strftime("%Y-%m-%d", date_touple)
     res = requests.get("http://sentence.iciba.com/index.php?c=dailysentence&m=getdetail&title=" + date)
     json_str = json.loads(res.text)
-    chinese=json_str["note"]
-    english=json_str["content"]
+    chinese = json_str["note"]
+    english = json_str["content"]
     pic = json_str["picture2"]
-    voice=json_str["tts"]
-    await session.send( "英文原文：" + english
+    voice = json_str["tts"]
+    await session.send("英文原文：" + english
                        + "\n翻译：" + chinese
                        + "\n封面：" + MessageSegment.image(pic))
     await session.send(MessageSegment.record(voice))
 
 
-file=open("../source/eng_daily.csv")
-urls=file.readlines()
-index=random.randint(1,len(urls)-1)
-res=requests.get(urls[index])
+file = open("../source/eng_daily.csv")
+urls = file.readlines()
+index = random.randint(1, len(urls) - 1)
+res = requests.get(urls[index])
+while not res.text.__contains__("今天的句子"):
+    index = random.randint(1, len(urls) - 1)
+    res = requests.get(urls[index])
+    print("err")
