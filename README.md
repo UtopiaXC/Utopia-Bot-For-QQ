@@ -1,6 +1,9 @@
 # Utopia-Bot-For-QQ
 
-[![MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/UtopiaXC/Utopia-Bot-For-QQ/blob/master/LICENSE)[![python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/downloads/)[![QQ Group](https://img.shields.io/badge/QQ%E8%AE%A8%E8%AE%BA%E7%BE%A4-663827726-yellowgreen)](https://jq.qq.com/?_wv=1027&k=JgJPM4Rv)[![Telegram](https://img.shields.io/badge/Telegram-Group-blue)](https://t.me/gugugu_club)  
+[![MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/UtopiaXC/Utopia-Bot-For-QQ/blob/master/LICENSE)
+[![python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/downloads/)
+[![QQ Group](https://img.shields.io/badge/QQ%E8%AE%A8%E8%AE%BA%E7%BE%A4-663827726-yellowgreen)](https://jq.qq.com/?_wv=1027&k=JgJPM4Rv)
+[![Telegram](https://img.shields.io/badge/Telegram-Group-blue)](https://t.me/gugugu_club)  
 这是一个基于[nonebot](https://github.com/nonebot/nonebot)机器人框架与[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)客户端设计的QQ聊天机器人  
 文档更新时间 2021-03-26 08:15  
 （由于腾讯比较垃圾，本项目暂停，全面转向至Telegram）  
