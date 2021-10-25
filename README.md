@@ -6,7 +6,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-Group-blue)](https://t.me/gugugu_club)  
 这是一个基于[nonebot](https://github.com/nonebot/nonebot)机器人框架与[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)客户端设计的QQ聊天机器人  
 文档更新时间 2021-03-26 08:15  
-（由于腾讯比较垃圾，本项目暂停，全面转向至Telegram）  
+（由于腾讯比较垃圾，本项目暂停，全面转向至[Telegram](https://github.com/UtopiaXC/Utopia-Bot-For-Telegram)）  
 
 ## 目录
 
